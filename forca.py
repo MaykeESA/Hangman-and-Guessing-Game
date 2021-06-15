@@ -78,13 +78,47 @@ def sistema_jogo(palavra_secreta, listaps, vida):
         print('-=' * 12)
 
         if listaps.count('_') == 0:
-            print(f'Você GANHOU!!')
+            imprime_ganhador()
             break
 
         elif vida == 0:
-            print('Você PERDEU!!')
-            print(f'A palavra era: {palavra_secreta}')
+            imprime_perdedor(palavra_secreta)
             break
+
+
+def imprime_ganhador():
+    print("Parabéns, você ganhou!")
+    print("       ___________      ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
+
+
+def imprime_perdedor(palavra_secreta):
+    print("Puxa, você foi enforcado!")
+    print(f"A palavra era {palavra_secreta}!!!")
+    print("    _______________         ")
+    print("   /               \       ")
+    print("  /                 \      ")
+    print("//                   \/\  ")
+    print("\|   XXXX     XXXX   | /   ")
+    print(" |   XXXX     XXXX   |/     ")
+    print(" |   XXX       XXX   |      ")
+    print(" |                   |      ")
+    print(" \__      XXX      __/     ")
+    print("   |\     XXX     /|       ")
+    print("   | |           | |        ")
+    print("   | I I I I I I I |        ")
+    print("   |  I I I I I I  |        ")
+    print("   \_             _/       ")
+    print("     \_         _/         ")
+    print("       \_______/           ")
 
 
 def jogar_novamente():
